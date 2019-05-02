@@ -1,0 +1,14 @@
+{
+  "restaurant": {
+    "id": 0,
+    "name": "Los Meandros",
+    "stars": 3,
+    "short_description" : "",
+    "long_description": "",
+    "location":[
+      { "place":"Girardota", "latitude":"6.392346", "longitude":"-75.448710"}
+    ],
+    "hours":[null, null, null, "17:00-23:45", "17:00-23:45", "13:00-00:00","13:00-00:00"],
+    "categories":["picnic", "paisa"]
+  }
+}
