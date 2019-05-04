@@ -48,10 +48,13 @@ router.get('/inventarios', function(req, res, next) {
 });
 
 router.get('/reservas', function(req, res, next) {
-  console.log("entra");
+  
+
+
+
   if(loggedin){
-    conexion.query('select * from Reserva',(err, result)=>{
-      console.log(result);
+    conexion.query('select * from Reserva where Restaurante_idRestaurante=?',[restaurante],(err, result)=>{
+      //console.log(result);
       res.render('reservas', { 
       title: 'Reservas',
       resultado: result,
@@ -74,6 +77,7 @@ router.post('/auth', function(request, response) {
         loggedin=true;
         usuario=results[0].username;
         idUsuario=results[0].idUsuario;
+      
 				response.redirect('/getVar');
 			} else {
 				response.send('Incorrect Username and/or Password!');
@@ -86,15 +90,20 @@ router.post('/auth', function(request, response) {
 	}
 });
 
-router.get('/getVar', function(request, response) {
+router.post('/reservafre', (request, response)=> {
+  console.log("reser");
+  console.log(request);
+	
+});
+
+//obtener variables
+router.get('/getVar', (request, response)=> {
   
   conexion.query('SELECT Restaurante_idRestaurante FROM Usuario where idUsuario=? ',[idUsuario], function(error, results, fields) {
       restaurante=results[0].Restaurante_idRestaurante;
       response.redirect('/index');
       
   });
-
-  
 	
 });
 module.exports = router;
