@@ -131,8 +131,8 @@ router.get('/getVar', (request, response)=> {
 	
 });
 router.post('/reservas0', (request, response)=>{reservaFrecuencia=0;datefield=request.body.datefield;response.redirect('/reservas');});
-router.get('/reservas1', (request, response)=> {reservaFrecuencia=1;response.redirect('/reservas');});
-router.get('/reservas2', (request, response)=> {reservaFrecuencia=2;response.redirect('/reservas');});
-router.get('/reservas3', (request, response)=> {reservaFrecuencia=3;response.redirect('/reservas');});
+router.post('/reservas1', (request, response)=> {reservaFrecuencia=1;response.redirect('/reservas');});
+router.post('/reservas2', (request, response)=> {reservaFrecuencia=2;response.redirect('/reservas');});
+router.post('/reservas3', (request, response)=> {reservaFrecuencia=3;response.redirect('/reservas');});
 
 module.exports = router;
