@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Estilos de Boostrap, con otros estilos para poder generar graficas -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <!-- Estilos de Boostrap, con otros estilos para poder generar graficas -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
     <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Bienvenido a ReSoft</title>
+	<title>Bienvenido a ReSoft</title>
 </head>
 <body>
-    <!-- ============================================================== -->
+<!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
@@ -25,8 +25,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index">ReSoft</a>
-                <h2>Hola, <%=username%></h2>
+                <a class="navbar-brand" href="index.html">ReSoft</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,7 +38,7 @@
                                     <h5 class="mb-0 text-white nav-user-name">Usuario</h5>
                                     <span class="status"></span><span class="ml-2">En Línea</span>
                                 </div>
-                                <a class="dropdown-item" href="/login"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
                             </div>
                         </li>
                     </ul>
@@ -60,7 +59,7 @@
                             <li class="nav-divider">
                                 Menu
                             </li>
-                            <li class="nav-item">
+                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Pedidos</a>
                              </li>
                             <li class="nav-item">
@@ -70,16 +69,16 @@
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Platos</a>
                              </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="inventarios"><i class="fa fa-fw fa-user-circle"></i>Inventario</a>
+                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Inventario</a>
                              </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Facturacion</a>
                              </li>   
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Reservas</a>
+                                <a class="nav-link" href="reservas.html"><i class="fa fa-fw fa-user-circle"></i>Reservas</a>
                              </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="empleados"><i class="fa fa-fw fa-user-circle"></i>Empleados</a>
+                                <a class="nav-link" href="empleados.html"><i class="fa fa-fw fa-user-circle"></i>Empleados</a>
                              </li>
                              <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fab fa-fw fa-wpforms"></i>Tableros</a>
@@ -107,7 +106,7 @@
         </div>
         <!-- ============================================================== -->
         <!-- fin menu izquierdo -->
-         <div class="dashboard-wrapper">
+		 <div class="dashboard-wrapper">
             <div class="container-fluid  dashboard-content">
                 <!-- ============================================================== -->
                 <!-- pageheader -->
@@ -115,144 +114,72 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Reservas</h2>
+                            <h2 class="pageheader-title">Empleados</h2>
                         </div>
                     </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- basic table  -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Lista reservas</h5>
-                            <div class="card-body">
-                            		<div class="card-body border-top" style="text-align: right;">
-                                           
-                                            <div class="input-group input-group-sm"  style=" width: 60%;" style="text-align: right;">
-                                                <div class="input-group-prepend"><span class="input-group-text">☼</span></div>
-                                                <input type="date" placeholder="Fecha" class="form-control" >
-                                                <button class="btn btn-primary btn-lg">Ver</button>
-											
-                                                <button class="btn btn-outline-primary" style="text-align: right;">Hoy</button>
-                                                <button class="btn btn-outline-primary" style="text-align: right;">Semana</button>
-                                                <button class="btn btn-outline-primary" style="text-align: right;">Mes</button>
-                                            </div>
-                            </div>		</div>
-                        </div>
-                    </div>
-                </div>
-									
-        <!-- Modal -->
-<div id="actualizar" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-  
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Actualización de reservas</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-          <div class="col">
-              <h4>Reserva con ID:</h4>
-              <br>
-              <h4>Nombre:</h4>
-              <br>
-              <h4>Contacto:</h4>
-              <br>
-              <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Fecha</span></div>
-                                                  <input type="date" placeholder="Fecha" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Hora</span></div>
-                                                  <input type="time" placeholder="Hora" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Descripción</span></div>
-                                                  <input type="text" placeholder="Descripción" class="form-control" >
-                                                  
-               </div>
-              <br>
-              <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Tipo</span></div>
-                                                  <input type="text" placeholder="Tipo" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Paquete</span></div>
-                                                  <input type="text" placeholder="Paquete" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Mesa</span></div>
-                                                  <input type="number" placeholder="Mesa" class="form-control" >
-                                                  
-               </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-        </div>
-      </div>
-  
-    </div>
-  </div>
-  <!-- End Modal  -->
          <div class="row">
                     <!-- ============================================================== -->
                     <!-- basic table  -->
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Lista reservas</h5>
+                            <h5 class="card-header">Lista de empleados</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
                                                 <th>id</th>
-                                                <th>Cliente</th>
-                                                <th>Contacto</th>
-                                                <th>Correo</th>
-                                                <th>Tipo</th>
-                                                <th>Hora</th>
-                                                <th>Fecha</th>
-                                                <th>Descripción</th>
-                                                <th>Paquete</th>
-                                                <th>Mesa</th>
-                                                
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Caducidad</th>
+                                                <th>Marca</th>
+                                                <th>Unidad medida</th>
+                                                <th>Costo Unidad</th>
+                                                <th>Costo total</th>
                                             </tr>
                                         </thead>
-                                        <% for(var i=0;i<resultado.length;i++) {  %>
+                                        <tbody>
                                             <tr>
-                                                
-                                                <td><%=resultado[i].idReserva      %></td>
-                                                <td><%=resultado[i].nombreCliente   %></td>
-                                                <td><%=resultado[i].telCliente      %></td>
-                                                <td><%=resultado[i].correoCliente   %></td>
-                                                <td><%=resultado[i].tipoCelebracion %></td>
-                                                <td><%=resultado[i].HoraFecha.split(' ')[0]       %></td>
-                                                <td><%=resultado[i].HoraFecha.split(' ')[1]       %></td>
-                                                <td><%=resultado[i].descripcion     %></td>
-                                                <td><%=resultado[i].paqueteElegido  %></td>
-                                                <td><%=resultado[i].Mesa_idMesa     %></td>
-                                                
+                                                <td>1</td>
+                                                <td>Joan</td>
+                                                <td>1111111</td>
+                                                <td>joan@joan.com</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+
                                             </tr>
-                                        <%}%>
-                                            
-                                        
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Camilo</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Caducidad</th>
+                                                <th>Marca</th>
+                                                <th>Unidad medida</th>
+                                                <th>Costo Unidad</th>
+                                                <th>Costo total</th>
+                                            </tr>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
