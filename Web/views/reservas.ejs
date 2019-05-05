@@ -16,6 +16,7 @@
     <title>Bienvenido a ReSoft</title>
 </head>
 <body>
+   
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -133,13 +134,14 @@
                             		<div class="card-body border-top" style="text-align: right;">
                                            
                                             <div class="input-group input-group-sm"  style=" width: 60%;" style="text-align: right;">
-                                                <div class="input-group-prepend"><span class="input-group-text">☼</span></div>
-                                                <input type="date" placeholder="Fecha" class="form-control" >
-                                                <button class="btn btn-primary btn-lg">Ver</button>
-											
-                                                <button class="btn btn-outline-primary" style="text-align: right;" action="/reservafre">Hoy</button>
-                                                <button class="btn btn-outline-primary" style="text-align: right;" action="/reservafre">Semana</button>
-                                                <button class="btn btn-outline-primary" style="text-align: right;" action="/reservafre">Mes</button>
+                                                <form method="POST">
+                                                    <div class="input-group-prepend"><span class="input-group-text">☼</span></div>
+                                                    <input type="date" name="datefield" placeholder="Fecha" class="form-control" >
+                                                    <input type="submit" formaction="reservas0" class="btn btn-primary btn-lg" value="Ver">
+                                                    <input type="submit" formaction="reservas1" class="btn btn-outline-primary" style="text-align: right;" value="Hoy">
+                                                    <input type="submit" formaction="reservas2" class="btn btn-outline-primary" style="text-align: right;" value="Semana">
+                                                    <input type="submit" formaction="reservas3" class="btn btn-outline-primary" style="text-align: right;" value="Mes">
+                                                </form>
                                             </div>
                             </div>		</div>
                         </div>
@@ -227,15 +229,16 @@
                                                 <th>Contacto</th>
                                                 <th>Correo</th>
                                                 <th>Tipo</th>
-                                                <th>Hora</th>
                                                 <th>Fecha</th>
+                                                <th>Hora</th>
                                                 <th>Descripción</th>
                                                 <th>Paquete</th>
                                                 <th>Mesa</th>
                                                 
                                             </tr>
                                         </thead>
-                                        <% for(var i=0;i<resultado.length;i++) {  %>
+                                        <% for(var i=0;i < resultado.length;i++) {  %>
+                                            <% if(allowed.indexOf(i)!=-1){ %>
                                             <tr>
                                                 
                                                 <td><%=resultado[i].idReserva      %></td>
@@ -250,6 +253,7 @@
                                                 <td><%=resultado[i].Mesa_idMesa     %></td>
                                                 
                                             </tr>
+                                            <%}%>
                                         <%}%>
                                             
                                         
