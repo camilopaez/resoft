@@ -239,26 +239,29 @@
                                                 
                                             </tr>
                                         </thead>
+                                        <tbody>
                                         <% for(var i=0;i < resultado.length;i++) {  %>
                                             <% if(allowed.indexOf(i)!=-1){ %>
-                                            <tr>
+                                             
+                                                <tr>
                                                 
-                                                <td><%=resultado[i].idReserva      %></td>
-                                                <td><%=resultado[i].nombreCliente   %></td>
-                                                <td><%=resultado[i].telCliente      %></td>
-                                                <td><%=resultado[i].correoCliente   %></td>
-                                                <td><%=resultado[i].tipoCelebracion %></td>
-                                                <td><%=resultado[i].HoraFecha.split(' ')[0]       %></td>
-                                                <td><%=resultado[i].HoraFecha.split(' ')[1]       %></td>
-                                                <td><%=resultado[i].descripcion     %></td>
-                                                <td><%=resultado[i].paqueteElegido  %></td>
-                                                <td><%=resultado[i].Mesa_idMesa     %></td>
+                                                    <td ><a href="#" data-toggle="modal" data-target="#actualizar"><%=resultado[i].idReserva    %></a></td>
+                                                    <td><%=resultado[i].nombreCliente   %></td>
+                                                    <td><%=resultado[i].telCliente      %></td>
+                                                    <td><%=resultado[i].correoCliente   %></td>
+                                                    <td><%=resultado[i].tipoCelebracion %></td>
+                                                    <td><%=resultado[i].HoraFecha.split(' ')[0]       %></td>
+                                                    <td><%=resultado[i].HoraFecha.split(' ')[1]       %></td>
+                                                    <td><%=resultado[i].descripcion     %></td>
+                                                    <td><%=resultado[i].paqueteElegido  %></td>
+                                                    <td><%=resultado[i].Mesa_idMesa     %></td>
                                                 
-                                            </tr>
+                                                </tr>
+                                            
                                             <%}%>
                                         <%}%>
                                             
-                                        
+                                    </tbody>
                                     </table>
                                 </div>
                             </div>
