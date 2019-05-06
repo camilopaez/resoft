@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Estilos de Boostrap, con otros estilos para poder generar graficas -->
+    <!-- Estilos de Boostrap, con otros estilos para poder generar graficas -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
@@ -14,11 +15,19 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>Bienvenido a ReSoft</title>
+<<<<<<< HEAD
     <link rel="shortcut icon" href="../public/assets/images/favicon.png" type="image/x-icon"/>
+=======
+
+
+
+
+>>>>>>> c
 
 </head>
+
 <body>
-   
+
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -30,32 +39,39 @@
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="index">ReSoft</a>
                 <h2>Hola, <%=username%></h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto navbar-right-top">      
+                    <ul class="navbar-nav ml-auto navbar-right-top">
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Usuario</h5>
                                     <span class="status"></span><span class="ml-2">En Línea</span>
                                 </div>
-                                <a class="dropdown-item" href="/login"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
+                                <a class="dropdown-item" href="/login"><i class="fas fa-power-off mr-2"></i>Cerrar
+                                    Sesión</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-		 <!--Barra izquierda-->
+        <!--Barra izquierda-->
         <!-- ============================================================== -->
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -65,27 +81,39 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Pedidos</a>
-                             </li>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href=""><i class="fa fa-fw fa-user-circle"></i>Ventas</a>
-                             </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Platos</a>
-                             </li>
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="inventarios"><i class="fa fa-fw fa-user-circle"></i>Inventario</a>
-                             </li>
-                             <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Platos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="inventarios"><i
+                                        class="fa fa-fw fa-user-circle"></i>Inventario</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Facturacion</a>
-                             </li>   
-                             <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Reservas</a>
+<<<<<<< HEAD
                              </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="empleados"><i class="fa fa-fw fa-user-circle"></i>Empleados</a>
                              </li>
                              <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fab fa-fw fa-wpforms"></i>Tableros</a>
+=======
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Empleados</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fab fa-fw fa-wpforms"></i>Tableros</a>
+>>>>>>> c
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -110,7 +138,7 @@
         </div>
         <!-- ============================================================== -->
         <!-- fin menu izquierdo -->
-         <div class="dashboard-wrapper">
+        <div class="dashboard-wrapper">
             <div class="container-fluid  dashboard-content">
                 <!-- ============================================================== -->
                 <!-- pageheader -->
@@ -133,88 +161,113 @@
                         <div class="card">
                             <h5 class="card-header">Lista reservas</h5>
                             <div class="card-body">
-                            		<div class="card-body border-top" style="text-align: right;">
-                                           
-                                            <div class="input-group input-group-sm"  style=" width: 60%;" style="text-align: right;">
-                                                <form method="POST">
-                                                    <div class="input-group-prepend"><span class="input-group-text">☼</span></div>
-                                                    <input type="date" name="datefield" placeholder="Fecha" class="form-control" >
-                                                    <input type="submit" formaction="reservas0" class="btn btn-primary btn-lg" value="Ver">
-                                                    <input type="submit" formaction="reservas1" class="btn btn-outline-primary" style="text-align: right;" value="Hoy">
-                                                    <input type="submit" formaction="reservas2" class="btn btn-outline-primary" style="text-align: right;" value="Semana">
-                                                    <input type="submit" formaction="reservas3" class="btn btn-outline-primary" style="text-align: right;" value="Mes">
-                                                </form>
+                                <div class="card-body border-top" style="text-align: right;">
+                                    <form method="POST">
+                                        <div class="input-group input-group-sm" style=" width: 60%;"
+                                            style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">☼</span>
                                             </div>
-                            </div>		</div>
+                                            <input type="date" name="datefield" placeholder="Fecha"
+                                                class="form-control">
+                                            <input type="submit" formaction="reservas0" class="btn btn-primary btn-lg"
+                                                value="Ver">
+                                            <input type="submit" formaction="reservas1" class="btn btn-outline-primary"
+                                                style="text-align: right;" value="Hoy">
+                                            <input type="submit" formaction="reservas2" class="btn btn-outline-primary"
+                                                style="text-align: right;" value="Semana">
+                                            <input type="submit" formaction="reservas3" class="btn btn-outline-primary"
+                                                style="text-align: right;" value="Mes">
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-									
-        <!-- Modal -->
-<div id="actualizar" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-  
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Actualización de reservas</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-          <div class="col">
-              <h4>Reserva con ID:</h4>
-              <br>
-              <h4>Nombre:</h4>
-              <br>
-              <h4>Contacto:</h4>
-              <br>
-              <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Fecha</span></div>
-                                                  <input type="date" placeholder="Fecha" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Hora</span></div>
-                                                  <input type="time" placeholder="Hora" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Descripción</span></div>
-                                                  <input type="text" placeholder="Descripción" class="form-control" >
-                                                  
-               </div>
-              <br>
-              <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Tipo</span></div>
-                                                  <input type="text" placeholder="Tipo" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Paquete</span></div>
-                                                  <input type="text" placeholder="Paquete" class="form-control" >
-                                                  
-               </div>
-               <br>
-               <div class="input-group input-group-sm"  style="text-align: right;">
-                                                  <div class="input-group-prepend"><span class="input-group-text">Mesa</span></div>
-                                                  <input type="number" placeholder="Mesa" class="form-control" >
-                                                  
-               </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-        </div>
-      </div>
-  
-    </div>
-  </div>
-  <!-- End Modal  -->
-         <div class="row">
+
+                <!-- Modal -->
+                <div id="actualizar" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Actualización de reservas</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            </div>
+                            <form id="formsubmit" method="POST" action="/actualizarreserva">
+                                
+                                    <div class="modal-body">
+
+                                    <div class="col">
+                                        <h4 id="reservaid"></h4>
+                                        </h4>
+                                        <br>
+                                        <h4 id="reservanom"></h4>
+                                        <br>
+                                        <h4 id="reservacon"></h4>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Fecha</span>
+                                            </div>
+                                            <input id="reservafec" type="date" placeholder="Fecha" class="form-control">
+
+                                        </div>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Hora</span>
+                                            </div>
+                                            <input id="reservahor" type="time" placeholder="Hora" class="form-control">
+
+                                        </div>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span
+                                                    class="input-group-text">Descripción</span></div>
+                                            <input id="reservades" type="text" placeholder="Descripción"
+                                                class="form-control">
+
+                                        </div>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Tipo</span>
+                                            </div>
+                                            <input id="reservatce" type="text" placeholder="Tipo" class="form-control">
+
+                                        </div>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span
+                                                    class="input-group-text">Paquete</span>
+                                            </div>
+                                            <input id="reservapaq" type="text" placeholder="Paquete"
+                                                class="form-control">
+
+                                        </div>
+                                        <br>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Mesa</span>
+                                            </div>
+                                            <input id="reservames" type="number" placeholder="Mesa"
+                                                class="form-control">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                
+                                <input type="submit" class="btn btn-primary" onClick="submit()" data-dismiss="modal" value="Guardar">
+                                
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Modal  -->
+                <div class="row">
                     <!-- ============================================================== -->
                     <!-- basic table  -->
                     <!-- ============================================================== -->
@@ -236,14 +289,22 @@
                                                 <th>Descripción</th>
                                                 <th>Paquete</th>
                                                 <th>Mesa</th>
-                                                
+
                                             </tr>
                                         </thead>
-                                        <% for(var i=0;i < resultado.length;i++) {  %>
+                                        <tbody>
+                                            <% for(var i=0;i < resultado.length;i++) {  %>
                                             <% if(allowed.indexOf(i)!=-1){ %>
+
                                             <tr>
-                                                
-                                                <td><%=resultado[i].idReserva      %></td>
+
+                                                <td><a class="identifier" href="#" data-toggle="modal"
+                                                        data-target="#actualizar"
+                                                        onClick="modal(
+                                                        '<%=resultado[i].idReserva%>','<%=resultado[i].nombreCliente%>','<%=resultado[i].telCliente%>','<%=resultado[i].correoCliente%>',' <%=resultado[i].tipoCelebracion %>','<%=resultado[i].HoraFecha.split(' ')[0]%>','<%=resultado[i].HoraFecha.split(' ')[1] %>','<%=resultado[i].descripcion%>','<%=resultado[i].paqueteElegido%>','<%=resultado[i].Mesa_idMesa%>')">
+                                                        <%=resultado[i].idReserva%></a>
+                                                </td>
+
                                                 <td><%=resultado[i].nombreCliente   %></td>
                                                 <td><%=resultado[i].telCliente      %></td>
                                                 <td><%=resultado[i].correoCliente   %></td>
@@ -253,12 +314,14 @@
                                                 <td><%=resultado[i].descripcion     %></td>
                                                 <td><%=resultado[i].paqueteElegido  %></td>
                                                 <td><%=resultado[i].Mesa_idMesa     %></td>
-                                                
+
                                             </tr>
+
                                             <%}%>
                                         <%}%>
-                                            
-                                        
+
+                                        </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -269,28 +332,50 @@
                     <!-- ============================================================== -->
                 </div>
 
+                <script>
+                    
+                    function submit(){
+                        document.getElementById("formsubmit").submit();
+
+                    }
+                    function modal(id, nom, tel, cor, tce, fec, hor, des, paq, mes) {
+                        document.getElementById("reservaid").innerText = "Reserva con ID:  " + id;
+                        document.getElementById("reservanom").innerText = "Nombre  :  " + nom;
+                        document.getElementById("reservacon").innerText = "Contacto  :  " + tel + " " + cor;
+                        document.getElementById("reservatce").value = (tce);
+                        document.getElementById("reservafec").value = (fec);
+                        document.getElementById("reservahor").value = (hor);
+                        document.getElementById("reservades").value = (des);
+                        document.getElementById("reservapaq").value = (paq);
+                        document.getElementById("reservames").value = (mes);
+                    }
+                    console.log(modal);
+                </script>
 
 
-	<!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="assets/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+                <!-- Optional JavaScript -->
+                <!-- jquery 3.3.1 -->
+                <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+                <!-- bootstap bundle js -->
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+                <!-- slimscroll js -->
+                <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+                <!-- main js -->
+                <script src="assets/libs/js/main-js.js"></script>
+                <!-- chart chartist js -->
+                <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+                <!-- sparkline js -->
+                <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+                <!-- morris js -->
+                <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+                <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+                <!-- chart c3 js -->
+                <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+                <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+                <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+                <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+
+
 </body>
+
 </html>
