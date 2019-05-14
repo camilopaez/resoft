@@ -135,7 +135,7 @@ router.post('/actualizarreserva',(req,res)=>{
   console.log("hola");
   var m = req;
   
-  console.log(m);
+  //console.log(m);
   res.redirect("/reservas");
   
 });

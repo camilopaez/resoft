@@ -34,13 +34,14 @@
                                 <div class="card" style="width:80%;">
                                     <div class="card-body" align="center" >
                                         <p class="card-text">
-                                            <form>
+                                            <form method="POST" action='/auth'>
                                         	 <div class="form-group">
                                                 <label for="inputEmail">Usuario</label>
-                                                <input id="inputEmail" type="email" placeholder="Usuario" class="form-control">
+                                                <input id="inputEmail" name="username" type="text" placeholder="Usuario" class="form-control">
                                                 <label for="inputEmail">Contraseña</label>
-                                                <input id="inputEmail" type="email" placeholder="********" class="form-control">
+                                                <input id="inputEmail" name="password" type="password" placeholder="********" class="form-control">
                                             </div>
+                                           
                                         </p>
                                         <button class="btn btn-primary btn-lg">Ingresar</button>
                                         </form>
