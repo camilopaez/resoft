@@ -36,9 +36,26 @@ router.get('/index', function(req, res, next) {
  
 router.get('/inventarios', function(req, res, next) {
   if(loggedin){
-    conexion.query('select * from Producto',(err, result)=>{
+    conexion.query('select Producto.idProducto, Producto.nombreProducto, Producto.marcaProducto,Producto.cantidad,Producto.fechaVencimiento,Producto.Costo ,MedidasProducto.MedidasProductocol from Producto join Producto_has_Restaurante join MedidasProducto where Producto_has_Restaurante.Producto_idProducto=? and MedidasProducto.idMedidasProducto=Producto.MedidasProducto_idMedidasProducto;',[restaurante],(err, result)=>{
       res.render('inventarios', { 
         title: 'Inventario',
+        resultado: result,
+        username: usuario  
+      });
+    });
+  }
+  else{
+    res.redirect('/login');
+  }
+});
+
+router.get('/empleados', function(req, res, next) {
+  
+  if(loggedin){
+    conexion.query('select * from Empleado where Restaurante_idRestaurante=? ',[restaurante],(err, result)=>{
+      
+      res.render('empleados', { 
+        title: 'Empleados',
         resultado: result,
         username: usuario  
       });
@@ -70,8 +87,10 @@ router.get('/reservas', function(req, res, next) {
     conexion.query('select * from Reserva where Restaurante_idRestaurante=?',[restaurante],(err, result)=>{
       var allowed=[];
       for(var i=0;i<result.length;i++) {
+        
         var refecha = moment.tz(result[i].HoraFecha, "America/Bogota");  
         //console.log(refecha.format(),inicio.format(),fin.format(),inicio<=refecha && refecha<=fin );
+        //console.log(result[i].HoraFecha);
         if(inicio<=refecha && refecha<=fin){
 
             allowed[con++]=i
@@ -103,6 +122,7 @@ router.post('/auth', function(request, response) {
 	if (username && password) {
 		conexion.query('SELECT * FROM Usuario WHERE (username = ? or correoUsuario=?) AND password = ?', [username,username, password], function(error, results, fields) {
       if (results.length > 0) {
+        
         loggedin=true;
         usuario=results[0].username;
         idUsuario=results[0].idUsuario;
@@ -132,11 +152,40 @@ router.get('/getVar', (request, response)=> {
 });
 
 router.post('/actualizarreserva',(req,res)=>{
-  console.log("hola");
-  var m = req;
   
-  //console.log(m);
+  rid = parseInt(req.body.reservaid);
+  rfec= req.body.reservafec;
+  rhor= req.body.reservahor;
+  rdes= req.body.reservades;
+  rtce= req.body.reservatce;
+  rpaq= req.body.reservapaq;
+  rmes= parseInt(req.body.reservames);
+  horaFecha= rfec+" "+rhor
+  
+  conexion.query('update Reserva set HoraFecha=?, descripcion=?, paqueteElegido=?, Mesa_idMesa=?, tipoCelebracion=?  where idReserva=?',[horaFecha,rdes,rpaq,rmes,rtce,rid], function(error, results, fields) {
+    console.log(error)
+    
+  });
+
   res.redirect("/reservas");
+  
+});
+
+router.post('/agregarproducto',(req,res)=>{
+  
+  nombre = req.body.nombre;
+  marca  = req.body.marca;
+  date   = req.body.date;
+  costo  = parseInt(req.body.costo);
+  unidad = parseInt(req.body.unidad);
+  cantidad= parseInt(req.body.cantidad);
+  
+  conexion.query('insert into Producto (nombreProducto, marcaProducto, cantidad, fechaVencimiento, Costo, MedidasProducto_idMedidasProducto) values (?,?,?,?,?,?)',[nombre, marca, cantidad, date, costo, unidad], function(error, results, fields) {
+    console.log(error)
+    
+  });
+
+  res.redirect("/inventarios");
   
 });
 

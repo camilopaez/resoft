@@ -136,52 +136,26 @@
                                         <thead>
                                             <tr>
                                                 <th>id</th>
-                                                <th>Producto</th>
-                                                <th>Cantidad</th>
-                                                <th>Caducidad</th>
-                                                <th>Marca</th>
-                                                <th>Unidad medida</th>
-                                                <th>Costo Unidad</th>
-                                                <th>Costo total</th>
+                                                <th>Nombre</th>
+                                                <th>Teléfono</th>
+                                                <th>Correo</th>
+                                                <th>Salario</th>
+                                                
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <% for(var i=0;i<resultado.length;i++) {  %>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Joan</td>
-                                                <td>1111111</td>
-                                                <td>joan@joan.com</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-
+                                                
+                                                <td><%=resultado[i].idEmpleado          %></td>
+                                                <td><%=resultado[i].nombreEmpleado      %></td>
+                                                <td><%=resultado[i].telEmpleado         %></td>
+                                                <td><%=resultado[i].correoEmpleado      %></td>
+                                                <td><%=resultado[i].salarioEmpleado     %></td>
+                                                
+            
+                                                
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Camilo</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>id</th>
-                                                <th>Producto</th>
-                                                <th>Cantidad</th>
-                                                <th>Caducidad</th>
-                                                <th>Marca</th>
-                                                <th>Unidad medida</th>
-                                                <th>Costo Unidad</th>
-                                                <th>Costo total</th>
-                                            </tr>
-                                            </tr>
-                                        </tfoot>
+                                        <%}%>
                                     </table>
                                 </div>
                             </div>

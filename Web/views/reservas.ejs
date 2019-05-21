@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>Bienvenido a ReSoft</title>
-    <link rel="shortcut icon" href="../public/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/assets/images/favicon.png" type="image/x-icon" />
 
 </head>
 
@@ -90,12 +90,15 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Reservas</a>
-                             </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="empleados"><i class="fa fa-fw fa-user-circle"></i>Empleados</a>
-                             </li>
-                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fab fa-fw fa-wpforms"></i>Tableros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="empleados"><i
+                                        class="fa fa-fw fa-user-circle"></i>Empleados</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fab fa-fw fa-wpforms"></i>Tableros</a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -180,43 +183,61 @@
 
                             </div>
                             <form id="formsubmit" method="POST" action="/actualizarreserva">
-                                
-                                    <div class="modal-body">
+
+                                <div class="modal-body">
 
                                     <div class="col">
-                                        <h4 id="reservaid"></h4>
-                                        </h4>
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">ID</span>
+                                            </div>
+                                            <input name="reservaid" id="reservaid" type="number" class="form-control" style="pointer-events:none;">
+                                        </div>
                                         <br>
-                                        <h4 id="reservanom"></h4>
+
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Nombre</span>
+                                            </div>
+                                            <input name="reservanom" id="reservanom" type="text" class="form-control" style="pointer-events:none;">
+
+                                        </div>
                                         <br>
-                                        <h4 id="reservacon"></h4>
+
+                                        <div class="input-group input-group-sm" style="text-align: right;">
+                                            <div class="input-group-prepend"><span class="input-group-text">Contacto</span>
+                                            </div>
+                                            <input name="reservacon" id="reservacon" type="text" class="form-control" style="pointer-events:none;">
+
+                                        </div>
                                         <br>
                                         <div class="input-group input-group-sm" style="text-align: right;">
                                             <div class="input-group-prepend"><span class="input-group-text">Fecha</span>
                                             </div>
-                                            <input id="reservafec" type="date" placeholder="Fecha" class="form-control">
+                                            <input name="reservafec" id="reservafec" type="date" placeholder="Fecha"
+                                                class="form-control">
 
                                         </div>
                                         <br>
                                         <div class="input-group input-group-sm" style="text-align: right;">
                                             <div class="input-group-prepend"><span class="input-group-text">Hora</span>
                                             </div>
-                                            <input id="reservahor" type="time" placeholder="Hora" class="form-control">
+                                            <input name="reservahor" id="reservahor" type="time" placeholder="Hora"
+                                                class="form-control">
 
                                         </div>
                                         <br>
                                         <div class="input-group input-group-sm" style="text-align: right;">
                                             <div class="input-group-prepend"><span
                                                     class="input-group-text">Descripción</span></div>
-                                            <input id="reservades" type="text" placeholder="Descripción"
-                                                class="form-control">
+                                            <input name="reservades" id="reservades" type="text"
+                                                placeholder="Descripción" class="form-control">
 
                                         </div>
                                         <br>
                                         <div class="input-group input-group-sm" style="text-align: right;">
                                             <div class="input-group-prepend"><span class="input-group-text">Tipo</span>
                                             </div>
-                                            <input id="reservatce" type="text" placeholder="Tipo" class="form-control">
+                                            <input name="reservatce" id="reservatce" type="text" placeholder="Tipo"
+                                                class="form-control">
 
                                         </div>
                                         <br>
@@ -224,7 +245,7 @@
                                             <div class="input-group-prepend"><span
                                                     class="input-group-text">Paquete</span>
                                             </div>
-                                            <input id="reservapaq" type="text" placeholder="Paquete"
+                                            <input name="reservapaq" id="reservapaq" type="text" placeholder="Paquete"
                                                 class="form-control">
 
                                         </div>
@@ -232,7 +253,7 @@
                                         <div class="input-group input-group-sm" style="text-align: right;">
                                             <div class="input-group-prepend"><span class="input-group-text">Mesa</span>
                                             </div>
-                                            <input id="reservames" type="number" placeholder="Mesa"
+                                            <input name="reservames" id="reservames" type="number" placeholder="Mesa"
                                                 class="form-control">
 
                                         </div>
@@ -240,9 +261,14 @@
 
                                 </div>
 
-                                
-                                <input type="submit" class="btn btn-primary" onClick="submit()" data-dismiss="modal" value="Guardar">
-                                
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="submit" class="btn btn-primary" value="Guardar">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="submit" data-dismiss="modal" class="btn btn-primary" value="Cerrar">
+                                    </div>
+                                </div>
                             </form>
                         </div>
 
@@ -315,15 +341,12 @@
                 </div>
 
                 <script>
-                    
-                    function submit(){
-                        document.getElementById("formsubmit").submit();
 
-                    }
+
                     function modal(id, nom, tel, cor, tce, fec, hor, des, paq, mes) {
-                        document.getElementById("reservaid").innerText = "Reserva con ID:  " + id;
-                        document.getElementById("reservanom").innerText = "Nombre  :  " + nom;
-                        document.getElementById("reservacon").innerText = "Contacto  :  " + tel + " " + cor;
+                        document.getElementById("reservaid" ).value = id;
+                        document.getElementById("reservanom").value = nom;
+                        document.getElementById("reservacon").value = tel + " " + cor;
                         document.getElementById("reservatce").value = (tce);
                         document.getElementById("reservafec").value = (fec);
                         document.getElementById("reservahor").value = (hor);
